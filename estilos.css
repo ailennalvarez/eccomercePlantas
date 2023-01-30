@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*ESITLOS CARD*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    box-shadow: 0px 5px 4px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+/*ESITLOS CARD*/
+#contenedor-productos {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.titulo{
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.precio{
+    font-weight: bold;
+}
+/*BTN CARRITO HEADER*/
+#boton-carrito {
+    border: none;
+    color: rgb(26, 68, 30);
+    font-size: 40px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: all .3s;
+  
+}
+#boton-carrito:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(26, 68, 30);
+}
+#boton-carrito:focus {
+    outline: none;
+}
+/*BTN AGREGAR CARD*/
+.boton-agregar {
+    background-color: rgb(26, 68, 30);
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 15px;
+    width: 100%;
+  
+}
+.boton-agregar:hover {
+    cursor: pointer;
+    background-color: green;
+}
+.boton-agregar:focus {
+    outline: none;
+}
+.iAgregar{
+    margin-left: 5px;
+}
+/*MODAL*/
+.modal-container {
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #fff;
+    background-color:rgb(84, 110, 86);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*for the top*/
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 23vh;
+    scrollbar-color: none;
+  }
+.modal-container::-webkit-scrollbar {
+    display: none;
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(26, 68, 30);
+    color: white;
+    width: 100%;
+  }
+  
+  .modal-header-titulo {
+    justify-self: start;
+    text-transform: uppercase;
+  }
+  
+  .modal-header-button {
+    cursor: pointer;
+    justify-self: end;
+    border: none;
+    background-color:rgb(26, 68, 30);
+}
+.icono-cerrar{
+    font-size: 45px;
+    color: white;
+    font-weight: bolder;
+}
+   .modal-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   width: 100%;
+   
+  }
+
+
+  .img-modal{
+    height: 120px;
+    width: 120px;
+    margin-top: 5px;
+  }
+  
+  .total-footer {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+  }
+  /*BTN ELIMINAR*/
+.btnEliminar{
+    border: none;
+    margin-top: 1px;
+    margin-left: 70px;
+    background-color: transparent;
+}
+.iEliminar{
+    font-size: 25px;
+    color: red;
+}
+
+.contador {
+    display: none;
+}
+.btn-cantidad{
+    border: none;
+    background-color: transparent ;
+}
+.btn-cantidad:hover{
+    color: white;
+}
+.iCant{
+    font-size: 20px;
+}
+.btnCancelar{
+    display: flex;
+    justify-content: start;
+    background-color: red;
+}
+/*FILTROS*/
+.filtros{
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+    margin-right: 60px;
+}
+.btnFiltros{
+    font-size: 25px;
+    margin-right: 15px;
+    background-color: transparent;
+    border: none;
+}
+.listaFiltros{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  
+}
+.listaFiltros li {
+    list-style: none;
+    
+}
+.banner{
+    position: absolute;
+    top: 200px;
+    left: 25px;
+}
