@@ -1,143 +1,65 @@
-Codido de prueba modal
-// verCarrito.addEventListener('click',()=>{
-//   const modalContainer = document.createElement('div');
-//     modalContainer.classList.add('modal-container');
-//   const div = document.createElement('div');
-//     div.classList.add('modal-dialog');
-//    const header = document.createElement('div');
-//     header.classList.add('modal-header');
-//     const titulo = document.createElement('h1');
-//       titulo.classList.add('modal-title');
-//       titulo.innerText=`CARRITO DE COMPRAS`; 
-//     const modalbutton = document.createElement("h2");
-//     modalbutton.classList.add('boton-modal');
-//     modalContainer.innerText=`X`;
+PENDIENTES
+//Volver al principal cuando selecciono los filtros, y cuando vuelvo que el menu de filtro se cierre
+//Podria ser, que el for each de productos este dentro de una funcion entonces cuando se hace click en el header se vuelva a mostrar todo el array de productos.
+//y q el menu se cierre ni idea
 
 
 
-//     insertamos
-//       modalContainer.append(div);
-//       div.append(header);
-//       header.append(titulo);
-//      header.append(modalbutton);
-//       modalContenedor.appendChild(modalContainer);
+//form metodos pago
 
-      
-   
+// metodos de pago 
+            const linea = document.createElement('hr');
+            linea.classList.add('mb-3');
+            const metodoPago = document.createElement('h4');
+            metodoPago.classList.add('mb-3');
+            metodoPago.innerText='Metodos de pago'
 
-  //    carrito.forEach((prod)=>{
-  //       const modalBody = document.createElement('div');
-  //       modalBody.classList.add('modal-body');
-  //       const titulo = document.createElement('h5');
-  //       titulo.textContent = `${prod.nombre}`
-  //       //categoria
-  //       const cat = document.createElement('p');
-  //       cat.innerText=`${prod.categoria}`;
-  //       //precio
-  //       const precio = document.createElement('p');
-  //       precio.classList.add('precio');
-  //       precio.textContent=`$${prod.precio}`;
-  //       const img = document.createElement('img');
-  //       img.innerText=`${prod.imagen}`
-      
-  //       modalBody.append(titulo);
-  //       modalBody.append(cat);
-  //       modalBody.append(precio);
-  //       modalBody.append(img);
-  //       modalContenedor.appendChild(modalBody);
-  //  })
-  //  //calculamos el total
-
-  //   const total = carrito.reduce((acc,items)=>acc + items.precio,0)
-
-  //   //ponremos el total en el footer
-  //   const divFooter = document.createElement('div');
-  //   const total1 = document.createElement('h2');
-  //   total1.classList.add('total-content')
-  //   total1.textContent=`TOTAL: $ ${total}`;
-  //   divFooter.append(total1);
-  //   modalContenedor.append(divFooter);
-// })
+           
+            //
+            const divMetodos = document.createElement('div');
+            divMetodos.classList.add('my-3');
 
 
-modal intento 2
-let mostrarModal = null;
-const verModal = () => {
-  //Para que no se repita la modal
-  if (mostrarModal !== null){
-    mostrarModal.remove();
-  }
+            const divTrajeta = document.createElement('div');
+            divTrajeta.classList.add('form-check');
 
-  mostrarModal = document.createElement('div');
-  const div1 = document.createElement('div');
-  div1.classList.add('modal');
-  div1.tabIndex = -1;
-  //
-  const div2 = document.createElement('div');
-  div2.classList.add('modal-dialog');
-  //
-  const div3 = document.createElement('div');
-  div3.classList.add('modal-content');
-  //
-  const div4 = document.createElement("div");
-  div4.classList.add('modal-header');
-  const h1 = document.createElement('h1');
-  h1.classList.add('modal-title');
-  h1.innerText=`CARRITO DE COMPRAS`; 
-  const button = document.createElement('button');
-  button.type=("button");
-  button.classList.add('btn-close');
-  // 
-  div1.append(div2);
-   div1.append(div3);
-   div3.append(div4);
-   div4.append(h1);
-   div4.append(button);
-   
- 
-  //
+            const inputTarjeta = document.createElement('input');
+            inputTarjeta.classList.add('form-check-input');
+            inputTarjeta.setAttribute('id','credito');
+            inputTarjeta.setAttribute('name','metodoPago');
+            inputTarjeta.type='radio';
+            inputTarjeta.setAttribute('checked','');
+            inputTarjeta.setAttribute('required','');
 
-  // el contenido 
-       carrito.forEach((prod)=>{
-        const modalBody = document.createElement('div');
-        modalBody.classList.add('modal-body');
-        const titulo = document.createElement('h5');
-        titulo.textContent = `${prod.nombre}`
-        //categoria
-        const cat = document.createElement('p');
-        cat.innerText=`${prod.categoria}`;
-        //precio
-        const precio = document.createElement('p');
-        precio.classList.add('precio');
-        precio.textContent=`$${prod.precio}`;
-        //imagen
-        const img = document.createElement('img');
-        img.innerText=`${prod.imagen}`
-      
-        modalBody.append(titulo);
-        modalBody.append(cat);
-        modalBody.append(precio);
-        modalBody.append(img);
-        mostrarModal.appendChild(modalBody);
-   })
-   let total = carrito.reduce((acc,items)=>acc + items.precio,0)
-   //footer
-   const footer = document.createElement('div');
-   footer.classList.add('modal-footer');
-   const btnCerrar = document.createElement('button');
-   btnCerrar.classList.add('btn','btn-secondary');
-   const totalFinal = document.createElement('h3');
-   totalFinal.textContent=`TOTAL $ ${total}`
+            const tarjeta = document.createElement('label');
+            tarjeta.classList.add('form-check-label');
+            tarjeta.setAttribute('for','credito');
+            tarjeta.innerText='Tarjeta de credito'
+            // tengo q agregar un evento q despliegue las cuotas
 
-   
+            divTrajeta.append(inputTarjeta);
+            divTrajeta.append(tarjeta);
 
-   mostrarModal.append(footer);
-   footer.append(button);
-   footer.append(totalFinal);
-   mostrarModal.appendChild(div1);
-   modalContenedor.appendChild(mostrarModal)
- 
-  
-   
-}
-verCarrito.addEventListener('click', verModal);
+            divMetodos.append(divTrajeta);
+
+            //efectivo
+            const divTransferencia = document.createElement('div');
+            divTransferencia.classList.add('form-check');
+
+            const inputTransferencia = document.createElement('input');
+            inputTransferencia.classList.add('form-check-input');
+            inputTransferencia.setAttribute('id','credito');
+            inputTransferencia.setAttribute('name','metodoPago');
+            inputTransferencia.type='radio';
+            inputTransferencia.setAttribute('required','');
+
+            const transferencia = document.createElement('label');
+            transferencia.classList.add('form-check-label');
+            transferencia.setAttribute('for','credito');
+            transferencia.innerText='Tarjeta de credito'
+            // tengo q agregar un evento q despliegue las cuotas
+
+            divTransferencia.append(inputTransferencia);
+            divTransferencia.append( transferencia);
+
+            divMetodos.append(divTransferencia);

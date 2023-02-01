@@ -129,21 +129,6 @@ header {
    width: 100%;
    
   }
-
-
-  .img-modal{
-    height: 120px;
-    width: 120px;
-    margin-top: 5px;
-  }
-  
-  .total-footer {
-    font-size: 25px;
-    padding: 20px;
-    text-align: center;
-    padding-top: 20px;
-
-  }
   /*BTN ELIMINAR*/
 .btnEliminar{
     border: none;
@@ -151,6 +136,14 @@ header {
     margin-left: 70px;
     background-color: transparent;
 }
+
+
+  .img-modal{
+    height: 120px;
+    width: 120px;
+    margin-top: 5px;
+  }
+
 .iEliminar{
     font-size: 25px;
     color: red;
@@ -168,12 +161,46 @@ header {
 }
 .iCant{
     font-size: 20px;
+}  
+/*FOOTER MODAL*/
+.modal-footer{
+    width: 100%;
 }
-.btnCancelar{
+.total-footer {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+} 
+
+.btnFooter{
     display: flex;
-    justify-content: start;
-    background-color: red;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px;
+    margin-bottom: 10px;
 }
+.btnCancelar,.btnFin{
+    border: none;
+    background-color: #E8CB9F;
+    font-size: 24px;
+    color: white;
+    border-radius: 5px;
+}
+.btnCancelar:hover,.btnFin:hover {
+    background-color:#96754A;
+}
+
+
+
+
+
+
+
+
+
+
 /*FILTROS*/
 .filtros{
     display: flex;
