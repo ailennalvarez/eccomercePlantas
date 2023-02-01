@@ -162,7 +162,7 @@ const mostrarModal = () =>{
     btnFooter.className="btnFooter";
     //btn cancelar compra y borrar 
     let btnCancelar = document.createElement('button');
-    btnCancelar.className=('btnCancelar')
+    btnCancelar.classList.add('btnCancelar','col-md-3')
     btnCancelar.innerText= 'Cancelar';
     btnCancelar.addEventListener('click', () => {
         //splice elimina desde la posicion 0, es decir, todo
@@ -173,7 +173,7 @@ const mostrarModal = () =>{
     })
     //btn finalizar compra
     let btnFin = document.createElement('button');
-    btnFin.className = 'btnFin';
+    btnFin.classList.add('btnFin','col-md-3') ;
     btnFin.innerText='Finalizar compra';
     //Evento al checkout
     btnFin.addEventListener('click', checkout);
