@@ -5,6 +5,7 @@ const verCarrito = document.getElementById('verCarrito');
 const modalContenedor = document.getElementById('modal-contenedor');
 const contadorCarrito = document.getElementById('contadorCarrito');
 const filtros = document.getElementById('filtros');
+const finCompra = document.getElementById('finCompra');
 
 let carrito = JSON.parse(localStorage.getItem('carritoLocal')) || [];
 
@@ -79,14 +80,10 @@ const plantillaCards = (producto) =>{
     });
 
 }
-
 Productos.forEach((producto)=>{
   plantillaCards(producto);
 })
-
-
 //local storage
-
 const guardarLocal = () =>{
   localStorage.setItem('carritoLocal', JSON.stringify(carrito));
 }

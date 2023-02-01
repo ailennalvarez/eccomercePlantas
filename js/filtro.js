@@ -1,5 +1,6 @@
 'use strict';
-//FILTROS
+
+
 
 const crearBtnFiltros = () =>{
   const btnFiltros = document.createElement('button');

@@ -148,16 +148,19 @@ const mostrarModal = () =>{
   
     //CALCULAMOS EL TOTAL FINAL
   
-    const totalFinal = carrito.reduce((acc,elemento)=> acc + elemento.precio  * elemento.cantidad , 0);
+     let totalFinal = carrito.reduce((acc,elemento)=> acc + elemento.precio  * elemento.cantidad , 0);
   
     //footer
-    const footer = document.createElement('div');
+    const footer = document.createElement('footer');
     footer.className = 'modal-footer';
   
     const totalFooter = document.createElement('h3');
     totalFooter.className = `total-footer`;
     totalFooter.innerText = ` Total a pagar: $ ${totalFinal}`;
     //btn cancelar compre
+    const btnFooter = document.createElement('div');
+    btnFooter.className="btnFooter";
+    //btn cancelar compra y borrar 
     let btnCancelar = document.createElement('button');
     btnCancelar.className=('btnCancelar')
     btnCancelar.innerText= 'Cancelar';
@@ -168,9 +171,19 @@ const mostrarModal = () =>{
         guardarLocal();
         mostrarModal();
     })
-  
+    //btn finalizar compra
+    let btnFin = document.createElement('button');
+    btnFin.className = 'btnFin';
+    btnFin.innerText='Finalizar compra';
+    //Evento al checkout
+    btnFin.addEventListener('click', checkout);
+
+
+   //apends
     footer.append(totalFooter);
-    footer.append(btnCancelar);
+    btnFooter.append(btnCancelar);
+    btnFooter.append(btnFin);
+    footer.append(btnFooter);
     modalContenedor.appendChild(footer);
     }
 }
@@ -198,3 +211,7 @@ const cantidadCarrito = () => {
 }
 //Para que el contador se reinice cuando actualizo 
 cantidadCarrito();
+
+
+
+
